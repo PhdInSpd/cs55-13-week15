@@ -14,7 +14,7 @@ export default function Layout( {
       </Head>
       <header>
         <nav>
-          <a href="https://music.youtube.com/search?q=juan+gabriel">Juan Gabriel Youtube Music</a>
+          My wordpress posts
         </nav>
       </header>
       <main>{children}</main>

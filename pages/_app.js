@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }) {
       <Component {...pageProps} />
       <Head>
         {/* this title does not update when placed before Component*/}
-        <title>CS55.13 Assignment 05</title>
+        <title>CS55.13 Assignment 11</title>
         <meta name='description' content='intro to next.js, Part1' />
         {/* required for responsive media querries */}
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>

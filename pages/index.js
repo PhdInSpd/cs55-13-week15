@@ -5,7 +5,7 @@ import { getSortedList } from '../lib/data';
 
 // does eacht page have getStaticProps?
 export async function getStaticProps() {
-  const allData = getSortedList();
+  const allData = await getSortedList();
   return {
     props: {
       allData
@@ -16,11 +16,12 @@ export async function getStaticProps() {
 export default function Home({ allData }) {
   return (
       <Layout home>
-        <h1>List of Rancheras</h1>
+        <h1>List of Post Titles</h1>
         <div className="list-group">
-          {allData.map(({ id, song }) => (
+          {allData.map((
+            { id, name }) => (
             <Link key={id} href={`/${id}`}>
-              <a className="list-group-item list-group-item-action">{song}: {id}</a>
+              <a className="list-group-item list-group-item-action">{name}: {id}</a>
             </Link>
           ))}
         </div>

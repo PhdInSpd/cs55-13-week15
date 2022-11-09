@@ -3,7 +3,7 @@ import { getAllIds, getData } from '../lib/data';
 import Layout from '../components/layout';
 // getStaticPaths() to report to next all possible dynamic urls
 export async function getStaticPaths() {
-    const allDynamicPaths = getAllIds();
+    const allDynamicPaths = await getAllIds();
     return {
         paths: allDynamicPaths,
         // 404 error related
@@ -25,12 +25,12 @@ export async function getStaticProps( {params} ) {
 export default function Entry( { itemData } ) {
     return(
         <Layout>
-            <h1>favorite ranchera: {itemData.id}</h1>   
+            <h1>favorite post tile : {itemData.post_title}</h1>   
             <article className = "card col-6">
                 <div className = "card-body">            
-                    <h5 className ="card-title">song: {itemData.song}</h5>
-                    <h6 className ="card-subtitle mb-2 text-muted">artist: {itemData.artist}</h6>
-                    <a href = {itemData.link} className ="card-link">youtube video</a>
+                    <h5 className ="card-title">post id: {itemData.ID}</h5>
+                    <h6 className ="card-subtitle mb-2 text-muted">post_author: {itemData.post_author}</h6>
+                    <h6 className ="card-subtitle mb-2 text-muted">post_content: {itemData.post_content}</h6>
                 </div>
             </article>
         </Layout>
