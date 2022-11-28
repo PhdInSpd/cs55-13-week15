@@ -14,7 +14,7 @@ export default function Layout( {
       </Head>
       <header>
         <nav>
-          My wordpress posts
+          My wordpress  CUSTOM posts
         </nav>
       </header>
       <main>{children}</main>
