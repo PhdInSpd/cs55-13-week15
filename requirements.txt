@@ -1,13 +1,13 @@
-o   -   Modify the code for the final full-stack application to provide three different URLs
-o       -   (one can be index.js) that display a list of linked titles from all WordPress posts for each custom post type.
-o       -   Each title entry on the list should be linked to a dynamically-routed page with a detailed view that displays at least three custom fields' contents. 
+x   -   Modify the code for the final full-stack application to provide three different URLs
+x       -   (one can be index.js) that display a list of linked titles from all WordPress posts for each custom post type.
+x       -   Each title entry on the list should be linked to a dynamically-routed page with a detailed view that displays at least three custom fields' contents. 
 
-o   -   You will need to modify SQL queries in your WordPress site's functions.php file.
-o       -   Ensure that the HTML markup in the post content is properly presented by using React's dangerouslySetInnerHTML attribute.
-        -    Utilize Next.js' Incremental Static Regeneration (ISR) to keep the display of all content from the WordPress CMS up-to-date. The assigned reading this week includes a complete tutorial that explore the use of Next.js' ISR functionality. 
+x   -   You will need to modify SQL queries in your WordPress site's functions.php file.
+x       -   Ensure that the HTML markup in the post content is properly presented by using React's dangerouslySetInnerHTML attribute.x
+x        -    Utilize Next.js' Incremental Static Regeneration (ISR) to keep the display of all content from the WordPress CMS up-to-date. The assigned reading this week includes a complete tutorial that explore the use of Next.js' ISR functionality. 
 
-o   -   You will use the WordPress-powered site and Next.js application code from the previous assignment.
-o   -   You may use a SFTP client like CyberDuck in order to transmit your custom PHP code to codebase of your WordPress site hosted on the Pantheon.io server, or you may use the built-in Theme Editor from your WordPress site dashboard.
-o   -   Your assignment must include three custom SQL queries 
-o       -   that use WHERE clauses to limit results to one of each of the three custom post types, omitting "post" and "page" type posts.
+x   -   You will use the WordPress-powered site and Next.js application code from the previous assignment.
+x   -   You may use a SFTP client like CyberDuck in order to transmit your custom PHP code to codebase of your WordPress site hosted on the Pantheon.io server, or you may use the built-in Theme Editor from your WordPress site dashboard.
+x   -   Your assignment must include three custom SQL queries 
+x       -   that use WHERE clauses to limit results to one of each of the three custom post types, omitting "post" and "page" type posts.
 o   -   Your final Next.js app should include a responsive, mobile-ready, user interface. You may use Chakra or Bootstrap component frameworks to achieve your final user interface, or custom styling.
