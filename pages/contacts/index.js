@@ -1,3 +1,4 @@
+import { Heading, SimpleGrid, Box } from '@chakra-ui/react';
 import Link from 'next/link';
 import Layout from '../../components/layout';
 import { getSortedContactsList } from '../../lib/data';
@@ -29,35 +30,25 @@ export default function Contacts( {allData}/*props*/) {
   //  console.log(allData);
   return (
       <Layout back={"home"}>
-            <h1>Contacts List</h1>
-            <div className="list-group">
-            {allData && allData.map((
-                { id, name }) => (
-                <Link key={id} href={`/contacts/${id}`}>
-                <a className="list-group-item list-group-item-action">{name}: {id}</a>
-                </Link>
-            ))}
-            </div>
+            <Heading as="h1">Contacts List</Heading>
+            <SimpleGrid  columns={{ base: 1, md: 2, lg: 3 }}>
+              {allData && allData.map((
+                  { id, name }) => (
+                  <Box  
+                    key={id}
+
+                    border="1px"
+                    borderColor="red.500"
+                    bg="blue.200"
+                    transition="0.2s">
+                    <Link
+                      href={`/contacts/${id}`}>
+                      <a className="list-group-item list-group-item-action">{name}: {id}</a>
+                    </Link>
+                  </Box>
+
+              ))}
+            </SimpleGrid>
       </Layout>
   );
 }
-
-// export default function Home({allData}) {
-//   const fetcher = (...args) => fetch(...args).then(res => res.json());
-//   // where does api/index.js handler get fed to useSWR?
-//   // how is the update triggered by useSWR?
-//   //const { allData } = useSWR("/api", fetcher, {fallbackData: props, refreshInterval: 5000});
-//   return (
-//       <Layout home>
-//         <h1>Contacts</h1>
-//         <div className="list-group">
-//           {allData && allData.map((
-//             { id, name }) => (
-//             <Link key={id} href={`contacts/${id}`}>
-//               <a className="list-group-item list-group-item-action">{name}: {id}</a>
-//             </Link>
-//           ))}
-//         </div>
-//       </Layout>
-//   );
-// }

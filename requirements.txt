@@ -10,4 +10,4 @@ x   -   You will use the WordPress-powered site and Next.js application code fro
 x   -   You may use a SFTP client like CyberDuck in order to transmit your custom PHP code to codebase of your WordPress site hosted on the Pantheon.io server, or you may use the built-in Theme Editor from your WordPress site dashboard.
 x   -   Your assignment must include three custom SQL queries 
 x       -   that use WHERE clauses to limit results to one of each of the three custom post types, omitting "post" and "page" type posts.
-o   -   Your final Next.js app should include a responsive, mobile-ready, user interface. You may use Chakra or Bootstrap component frameworks to achieve your final user interface, or custom styling.
+x   -   Your final Next.js app should include a responsive, mobile-ready, user interface. You may use Chakra or Bootstrap component frameworks to achieve your final user interface, or custom styling.

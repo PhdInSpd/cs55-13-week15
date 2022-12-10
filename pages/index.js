@@ -1,20 +1,63 @@
+import { Box,
+        Container,
+        SimpleGrid } from "@chakra-ui/react";
+import { FaToggleOff,
+         FaToggleOn,
+          FaTrash,
+           FaEdit } from "react-icons/fa";
+
 import Link from "next/link";
 import Layout from "../components/layout";
 export default function Home() {
   return (
-    <Layout home>
-      <ul>
-        <li>
-          <Link href="/contacts">Contacts</Link>
-        </li>
-        <li>
-          <Link href="/addresses">Addresses</Link>
-        </li>
-        <li>
-          <Link href="/textiles">Textiles</Link>
-        </li>
-      </ul>   
-    </Layout>
+    // <Layout>
+    //   <ul>
+    //     <li>
+    //       <Link href="/contacts">Contacts</Link>
+    //     </li>
+    //     <li>
+    //       <Link href="/addresses">Addresses</Link>
+    //     </li>
+    //     <li>
+    //       <Link href="/textiles">Textiles</Link>
+    //     </li>
+    //   </ul>   
+    // </Layout>
+    //<Container maxW={"7xl"}>
+      <Box  mt={1}   
+            p={2}
+            //boxShadow="2xl"
+            //shadow={"dark-lg"}
+            border="1px"
+            borderColor="red.500"
+            bg="gray.200"
+            transition="0.2s"
+            >
+        <SimpleGrid 
+            columns={{ base: 1, md: 2, lg: 3 }}>
+          <Box
+            border="1px"
+            borderColor="red.500"
+            bg="blue.200"
+            transition="0.2s">
+            <Link href={"/contacts/"} display="flex">Contacts </Link>
+          </Box>
+          <Box  border="1px"
+            borderColor="red.500"
+            bg="blue.200"
+            transition="0.2s">
+            <Link href={"/addresses/"} display="flex">Addresses</Link>
+          </Box>
+          <Box  border="1px"
+            borderColor="red.500"
+            bg="blue.200"
+            transition="0.2s">
+            <Link href={"/textiles/"} display="flex">Textiles</Link>
+          </Box>
+        </SimpleGrid>
+      </Box>
+    //</Container>
+    
   );
 }
 /*

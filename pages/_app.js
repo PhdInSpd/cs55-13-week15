@@ -1,23 +1,15 @@
-import Head from 'next/head';
-import '../styles/bootstrap.min.css';
-// has media queries
-import '../styles/globals.css';
+//import '../styles/globals.css'
+
+import { ChakraProvider } from "@chakra-ui/react";
+import MainNavBar from "../components/MainNavBar";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <>      
-      <Component {...pageProps} />
-      <Head>
-        {/* this title does not update when placed before Component*/}
-        <title>CS55.13 Assignment 11</title>
-        <meta name='description' content='intro to next.js, Part1' />
-        {/* required for responsive media querries */}
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-      </Head> 
-    </>
-  );
+        <ChakraProvider>
+          <MainNavBar/>
+          <Component {...pageProps} />
+        </ChakraProvider>
+    );
 }
 
 export default MyApp
-
-

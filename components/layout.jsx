@@ -1,50 +1,43 @@
+import { Box } from '@chakra-ui/react';
 import Head from 'next/head';
 import Link from 'next/link';
-// import { Back } from './back';
-// markup for global html
 const Layout = ( { 
                                     // all markup to be shown
                                     children,
                                     // string backkbutton
                                      back } )  =>{
   return (
-    <div>
+    <Box m={2}>
       <Head>
-        <title>Basic Next.js App</title>
+        <title>Headless App</title>
       </Head>
-      <header>
-        <nav>
-          WP Custom Posts
-        </nav>
-      </header>
       <main>{children}</main>
       {back && (back=="contacts" || back=="textiles" || back=="addresses")&& (
           <>
-            <div>
+            <Box bg={"blue.100"}>
               <Link href={`/${back}`}>
-                <a class="btn btn-primary mt-3">← Back to {back}</a>
+                 {`← Back to ${back}`}
               </Link>
-            </div>
-            <div>
+            </Box>
+            <Box bg={"blue.100"}>
               <Link href={`/`}>
-                <a class="btn btn-primary mt-3">← Back to home</a>
+                ← Back to home
               </Link>
-            </div>
+            </Box>
           </>
         )
       }
       {back && (back=="home")&& (
           <>
-            <Link href={`/`}>
-              <a class="btn btn-primary mt-3">← Back to {back}</a>
-            </Link>
+            <Box bg={"blue.100"}>
+              <Link href={`/`}>
+                ← Back to home
+              </Link>
+            </Box>
           </>
         )
       }
-      {/* <footer>
-        <p>The footer</p>
-      </footer> */}
-    </div>
+    </Box>
   );
 };
 export default Layout;
